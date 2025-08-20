@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>dev.latanti</groupId>
+  <artifactId>wasm-fop</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>25</maven.compiler.source>
+    <maven.compiler.target>25</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.xmlgraphics</groupId>
+      <artifactId>fop</artifactId>
+      <version>2.11</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+<!--              <mainClass>FopMain</mainClass>-->
+              <mainClass>FopJavaMain</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.14.0</version>
+        <configuration>
+          <compilerArgs>
+            <arg>--add-exports=java.desktop/sun.java2d.cmm=ALL-UNNAMED</arg>
+            <arg>-parameters</arg>
+          </compilerArgs>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.graalvm.buildtools</groupId>
+        <artifactId>native-maven-plugin</artifactId>
+        <version>0.10.6</version>
+        <extensions>true</extensions>
+        <configuration>
+          <mainClass>FopMain</mainClass>
+<!--          <mainClass>FopJavaMain</mainClass>-->
+          <imageName>../fop</imageName>
+          <buildArgs>
+            <buildArg>--tool:svm-wasm</buildArg>
+            <buildArg>-Djava.awt.headless=true</buildArg>
+            <buildArg>--allow-incomplete-classpath</buildArg>
+            <buildArg>--initialize-at-run-time=sun.awt.resources.awt</buildArg>
+<!--            <buildArg>&#45;&#45;emit build-report</buildArg>-->
+          </buildArgs>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

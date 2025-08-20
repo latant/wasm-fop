@@ -1,0 +1,6 @@
+target/
+fop.js.wasm
+fop.js.wat
+node_modules
+*.pdf
+graalvm-agent-output
