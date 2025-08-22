@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <fop version="1.0">
-  <base>./</base>
-  <font-base>./</font-base>
+  <base>file:///</base>
+  <font-base>file:///</font-base>
   <use-cache>false</use-cache>
   <source-resolution>72</source-resolution>
   <target-resolution>72</target-resolution>
@@ -16,7 +16,7 @@
           <font-triplet name="DejaVu Sans" style="italic" weight="normal"/>
           <font-triplet name="DejaVu Sans" style="normal" weight="bold"/>
         </font> -->
-        <font embed-url="file:///Roboto.ttf" kerning="yes" embed="yes" embedAsType="truetype" embedAsTypeSubset="yes">
+        <font embed-url="file:///examples/Roboto.ttf" kerning="yes" embed="yes" embedAsType="truetype" embedAsTypeSubset="yes">
           <font-triplet name="Roboto" style="normal" weight="normal"/>
           <!-- <font-triplet name="Roboto" style="italic" weight="normal"/>
           <font-triplet name="Roboto" style="normal" weight="bold"/> -->
