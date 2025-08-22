@@ -23,9 +23,9 @@ public class FopJavaMain {
         if (p.toString().endsWith(".fo")) {
           var outputPath = Path.of(p.toString().replace(".fo", "-java.pdf"));
           if (outputPath.equals(p)) {
-            throw new RuntimeException("output path equals input path");
+            throw new RuntimeException("Output path is the same as input path: " + outputPath);
           }
-          System.out.println("Converting " + p+ " to " + outputPath);
+          System.out.println("Transforming " + p+ " to " + outputPath);
           var output = impl.transform("file:///" + p, "file:///examples/config.xconf");
           Files.write(outputPath, output);
         }

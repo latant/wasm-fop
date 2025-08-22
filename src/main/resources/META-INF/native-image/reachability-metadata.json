@@ -1,45 +1,6 @@
 {
   "reflection": [
     {
-      "type": "FopJavaMain",
-      "jniAccessible": true,
-      "methods": [
-        {
-          "name": "main",
-          "parameterTypes": [
-            "java.lang.String[]"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "com.apple.eawt._AppEventHandler",
-      "jniAccessible": true,
-      "methods": [
-        {
-          "name": "handleNativeNotification",
-          "parameterTypes": [
-            "int"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "com.apple.eawt._AppMenuBarHandler",
-      "jniAccessible": true,
-      "methods": [
-        {
-          "name": "initMenuStates",
-          "parameterTypes": [
-            "boolean",
-            "boolean",
-            "boolean",
-            "boolean"
-          ]
-        }
-      ]
-    },
-    {
       "type": "com.intellij.rt.execution.application.AppMainV2$Agent",
       "methods": [
         {
@@ -2605,16 +2566,6 @@
       ]
     },
     {
-      "type": "sun.lwawt.macosx.LWCToolkit",
-      "jniAccessible": true,
-      "methods": [
-        {
-          "name": "installToolkitThreadInJava",
-          "parameterTypes": []
-        }
-      ]
-    },
-    {
       "type": "sun.security.provider.MD5",
       "methods": [
         {
@@ -2944,22 +2895,6 @@
     },
     {
       "glob": "org/apache/xmlgraphics/image/codec/Messages_en_HU.properties"
-    },
-    {
-      "module": "java.desktop",
-      "glob": "sun/awt/resources/awt_en.properties"
-    },
-    {
-      "module": "java.desktop",
-      "glob": "sun/awt/resources/awt_en_HU.properties"
-    },
-    {
-      "module": "java.desktop",
-      "glob": "sun/awt/resources/awtosx_en.properties"
-    },
-    {
-      "module": "java.desktop",
-      "glob": "sun/awt/resources/awtosx_en_HU.properties"
     },
     {
       "module": "java.desktop",

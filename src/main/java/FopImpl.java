@@ -17,7 +17,6 @@ import java.util.Map;
 public class FopImpl {
   private final Map<URI, byte[]> files = new HashMap<>();
 
-
   void clearFiles() {
     files.clear();
   }
