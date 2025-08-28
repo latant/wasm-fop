@@ -60,6 +60,7 @@
             <buildArg>-Djava.awt.headless=true</buildArg>
             <buildArg>--allow-incomplete-classpath</buildArg>
             <buildArg>--initialize-at-run-time=sun.awt.resources.awt</buildArg>
+
 <!--            <buildArg>&#45;&#45;emit build-report</buildArg>-->
           </buildArgs>
         </configuration>

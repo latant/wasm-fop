@@ -8,4 +8,7 @@ public final class CFontManager_Substitutions {
 
   @Substitute
   protected void loadFonts() {}
+
+  @Substitute
+  private void loadNativeDirFonts(String fontPath) {}
 }
